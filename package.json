@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "nodemon --inspect src/index.js",
-    "beautiful": "lint-staged",
+    "beautiful": "prettier --single-quote --trailing-comma all --write src/**/*.{js,json,scss}",
     "watch": "node-sass --watch src/resources/scss --output src/public/css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -28,12 +28,10 @@
     "url": "https://github.com/htas0502/nodejs_blog/issues"
   },
   "homepage": "https://github.com/htas0502/nodejs_blog#readme",
-  "lint-staged": {
-    "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --write"
-  },
   "dependencies": {
     "express": "^4.18.2",
     "express-handlebars": "^7.0.7",
+    "mongoose": "^7.3.4",
     "nodemon": "^2.0.22"
   },
   "devDependencies": {
